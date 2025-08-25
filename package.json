@@ -1,0 +1,28 @@
+{
+  "name": "07-account-abstraction",
+  "version": "1.0.0",
+  "description": "[ERC-4337: Account Abstraction Using Alt Mempool](https://eips.ethereum.org/EIPS/eip-4337)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "dotenv": "^16.4.5",
+    "ethers": "6",
+    "web3": "^4.16.0",
+    "web3-plugin-zksync": "^1.0.8",
+    "zksync-ethers": "^6.8.0"
+  },
+  "type": "module",
+  "scripts": {
+    "encryptKey": "node javascript-scripts/EncryptKey.js",
+    "deploy": "node javascript-scripts/DeployZkMinimal.js",
+    "sendTx": "node javascript-scripts/SendAATx.js",
+    "compile": "forge build --zksync"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
