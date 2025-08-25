@@ -10,7 +10,7 @@ import {BOOTLOADER_FORMAL_ADDRESS} from "foundry-era-contracts/Constants.sol";
 import {ACCOUNT_VALIDATION_SUCCESS_MAGIC} from "foundry-era-contracts/interfaces/IAccount.sol";
 
 contract ZkSyncMinimalAccountTest is Test {
-//    using MessageHashUtils for bytes32;
+    //    using MessageHashUtils for bytes32;
 
     ZkSyncMinimalAccount private minimalAccount;
     ERC20Mock private usdc;
@@ -44,7 +44,7 @@ contract ZkSyncMinimalAccountTest is Test {
         assertEq(usdc.balanceOf(address(minimalAccount)), AMOUNT);
     }
 
-    function test_validateTransaction() public /*onlyZkSync */{
+    function test_validateTransaction() public /*onlyZkSync */ {
         // Arrange
         address destination = address(usdc);
         uint256 value = 0;
